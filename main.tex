@@ -1,0 +1,70 @@
+\documentclass{beamer}
+
+\usetheme{metropolis}
+
+% Paquetes obligatorios
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage[spanish]{babel}
+\usepackage{subcaption}
+
+% Colores corporativos UDC
+\definecolor{udcpink}{RGB}{177,0,114}
+\definecolor{udcgray}{RGB}{100,100,100}
+
+% Personalización metropolis con colores oscuros
+\setbeamercolor{frametitle}{bg=udcpink!90!black, fg=white}
+\setbeamercolor{progress bar}{fg=udcpink}
+\setbeamercolor{alerted text}{fg=udcpink}
+
+%----------------------------------------------------------------------------------------
+%	TÍTULO
+%----------------------------------------------------------------------------------------
+
+\title[NIC]{Neural Image Compression (NIC): El fin de la era JPEG}
+\subtitle{Compresión Neuronal de Imágenes}
+\author[IGM]{
+Daniel Quintillán Quintillán \\
+Ponente 2 \\
+Ponente 3 \\
+Ponente 4 \\
+Ponente 5
+}
+\institute[UDC]{
+Introducción á Xestión Multimedia \\
+Universidade da Coruña
+}
+\date{Mayo 2026}
+
+\begin{document}
+
+% Portada
+\begin{frame}
+\centering
+\vspace{10pt}
+\includegraphics[scale=0.2]{images/udc}
+\titlepage
+\end{frame}
+
+% Índice
+\begin{frame}{Índice}
+\tableofcontents
+\end{frame}
+
+% Contenido por bloques
+\include{contents/1problema_paradigma}
+\include{contents/2fundamentos}
+\include{contents/3evolucion_resultados}
+\include{contents/4retos_casos}
+\include{contents/5impacto_futuro}
+
+% Cierre
+\begin{frame}[standout]
+¡Gracias por su atención!
+\end{frame}
+
+\end{document}

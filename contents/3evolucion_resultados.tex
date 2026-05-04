@@ -1,0 +1,56 @@
+\section{Evolución y Resultados}
+
+% --- Ponente 3 ---
+
+\begin{frame}{Evolución Arquitectónica}
+\begin{itemize}
+    \item \textbf{Primera generación:} CNNs --- capturan patrones \textit{locales} eficientemente.
+    \item \textbf{Segunda generación:} \textbf{Vision Transformers (ViT)} --- entienden el \textit{contexto global} mediante mecanismos de \textbf{atención}.
+    \item La atención permite ponderar regiones distantes de la imagen para una codificación más eficiente.
+\end{itemize}
+
+% INSERTAR FIGURA 2 AQUI
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/evolucion_arquitecturas}
+%     \caption{De CNNs a Vision Transformers en compresión neuronal.}
+% \end{figure}
+\end{frame}
+
+\begin{frame}{Resultados vs. JPEG}
+\begin{alertblock}{BD-Rate: 65\% de ahorro}
+Los modelos NIC actuales ahorran un \textbf{65\% de bits} respecto a JPEG manteniendo la misma calidad visual en el dataset Kodak.
+\end{alertblock}
+\begin{itemize}
+    \item Métrica \textbf{BD-Rate}: mide el ahorro porcentual de bits a calidad equivalente.
+    \item Superan también a HEVC/Intra en múltiples benchmarks.
+    \item Rendimiento consistente en distintos tipos de contenido.
+\end{itemize}
+
+% INSERTAR FIGURA 4 AQUI (Curva R-D)
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/curva_rd}
+%     \caption{Curva Tasa-Distorsión: NIC vs. códecs clásicos.}
+% \end{figure}
+\end{frame}
+
+\begin{frame}{Ventajas Perceptivas y Adaptabilidad}
+\begin{itemize}
+    \item \textbf{Fine-tuning} para dominios específicos:
+    \begin{itemize}
+        \item Radiografías médicas.
+        \item Imágenes satelitales.
+        \item Contenido artístico.
+    \end{itemize}
+    \item Uso de métricas perceptuales como \textbf{MS-SSIM} para optimizar para el ojo humano.
+    \item Degradación \textbf{suave y gradual}, sin artefactos de bloque.
+\end{itemize}
+
+% INSERTAR FIGURA 5 AQUI
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{images/comparacion_perceptual}
+%     \caption{Comparación perceptual: NIC vs. JPEG a misma tasa de bits.}
+% \end{figure}
+\end{frame}

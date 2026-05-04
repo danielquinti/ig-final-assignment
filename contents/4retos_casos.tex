@@ -1,0 +1,51 @@
+\section{Retos y Casos de Uso}
+
+% --- Ponente 4 ---
+
+\begin{frame}{El Cuello de Botella del Hardware}
+\begin{itemize}
+    \item Modelos autorregresivos: tardan \textbf{segundos por imagen} en una CPU convencional.
+    \item Complejidad computacional $\gg$ decodificadores JPEG.
+    \item \textbf{Necesidad absoluta} de hardware dedicado:
+    \begin{itemize}
+        \item NPU (Neural Processing Unit).
+        \item GPU con soporte de inferencia optimizada.
+        \item Aceleradores ASIC específicos.
+    \end{itemize}
+\end{itemize}
+\begin{alertblock}{Barrera de adopción}
+Sin aceleración hardware, NIC no es viable para decodificación en tiempo real.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Casos de Uso Reales Actuales}
+\begin{exampleblock}{Almacenamiento WORM en la nube}
+Netflix / Meta: codifican una vez, leen millones de veces. El coste de codificación se amortiza masivamente.
+\end{exampleblock}
+\begin{itemize}
+    \item \textbf{VCM} (Video Coding for Machines):
+    \begin{itemize}
+        \item Compresión optimizada para visión artificial.
+        \item Coches autónomos, vigilancia, drones.
+        \item La máquina no necesita ``calidad visual humana''.
+    \end{itemize}
+    \item Archivos digitales de larga duración.
+    \item Streaming adaptativo con decodificación en servidor.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Limitaciones Críticas: Alucinaciones Generativas}
+\begin{alertblock}{Peligro: contenido inventado}
+A tasas de bits extremadamente bajas, los modelos generativos \textbf{inventan texturas realistas pero falsas} (``alucinaciones'').
+\end{alertblock}
+\begin{itemize}
+    \item La imagen reconstruida \textit{parece} correcta, pero contiene detalles ficticios.
+    \item \textbf{Inasumible} en dominios críticos:
+    \begin{itemize}
+        \item Imágenes médicas (diagnóstico erróneo).
+        \item Evidencia forense (pruebas judiciales).
+        \item Cartografía y teledetección.
+    \end{itemize}
+    \item Requiere métricas de fidelidad estrictas, no solo perceptuales.
+\end{itemize}
+\end{frame}

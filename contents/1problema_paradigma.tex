@@ -1,0 +1,27 @@
+\section{El Problema y Cambio de Paradigma}
+
+% --- Ponente 1 ---
+
+\begin{frame}{El límite del diseño humano (\textit{Handcrafted})}
+\begin{alertblock}{Internet colapsa bajo el peso visual}
+El 80\% del tráfico de Internet es contenido visual (imágenes y vídeo).
+\end{alertblock}
+\begin{itemize}
+    \item Los códecs clásicos (JPEG, HEVC) se basan en la \textbf{DCT} y procesamiento por bloques.
+    \item Diseñados manualmente hace décadas, han alcanzado su \textbf{techo matemático}.
+    \item Resultado: \textbf{artefactos de bloque} visibles a tasas bajas de bits.
+    \item No aprovechan la redundancia semántica de la imagen.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{El Paradigma del Aprendizaje (NIC)}
+\begin{block}{Neural Image Compression}
+Dejar que una \textbf{red neuronal profunda} aprenda automáticamente la representación más eficiente de la imagen, sin reglas diseñadas a mano.
+\end{block}
+\vspace{0.5cm}
+\textbf{Pregunta clave:}
+\begin{enumerate}
+    \item ¿Es \textbf{técnicamente} viable sustituir a JPEG hoy?
+    \item ¿Es \textbf{industrialmente} viable su despliegue a escala?
+\end{enumerate}
+\end{frame}
