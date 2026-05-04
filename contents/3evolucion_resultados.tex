@@ -8,13 +8,14 @@
     \item \textbf{Segunda generación:} \textbf{Vision Transformers (ViT)} --- entienden el \textit{contexto global} mediante mecanismos de \textbf{atención}.
     \item La atención permite ponderar regiones distantes de la imagen para una codificación más eficiente.
 \end{itemize}
+\end{frame}
 
-% INSERTAR FIGURA 2 AQUI
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/evolucion_arquitecturas}
-%     \caption{De CNNs a Vision Transformers en compresión neuronal.}
-% \end{figure}
+\begin{frame}{Evolución Arquitectónica}
+ \begin{figure}
+     \centering
+     \includegraphics[width=0.9\textwidth]{images/evolution_diagram}
+     \caption{De CNNs a Vision Transformers en compresión neuronal.}
+\end{figure}
 \end{frame}
 
 \begin{frame}{Resultados vs. JPEG}
@@ -26,13 +27,14 @@ Los modelos NIC actuales ahorran un \textbf{65\% de bits} respecto a JPEG manten
     \item Superan también a HEVC/Intra en múltiples benchmarks.
     \item Rendimiento consistente en distintos tipos de contenido.
 \end{itemize}
+\end{frame}
 
-% INSERTAR FIGURA 4 AQUI (Curva R-D)
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/curva_rd}
-%     \caption{Curva Tasa-Distorsión: NIC vs. códecs clásicos.}
-% \end{figure}
+\begin{frame}{Resultados vs. JPEG}
+ \begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{images/kodak-psnr}
+     \caption{Curva Tasa-Distorsión: NIC vs. códecs clásicos.}
+ \end{figure}
 \end{frame}
 
 \begin{frame}{Ventajas Perceptivas y Adaptabilidad}
@@ -46,11 +48,12 @@ Los modelos NIC actuales ahorran un \textbf{65\% de bits} respecto a JPEG manten
     \item Uso de métricas perceptuales como \textbf{MS-SSIM} para optimizar para el ojo humano.
     \item Degradación \textbf{suave y gradual}, sin artefactos de bloque.
 \end{itemize}
+\end{frame}
 
-% INSERTAR FIGURA 5 AQUI
-% \begin{figure}
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{images/comparacion_perceptual}
-%     \caption{Comparación perceptual: NIC vs. JPEG a misma tasa de bits.}
-% \end{figure}
+\begin{frame}{Ventajas Perceptivas y Adaptabilidad}
+ \begin{figure}
+     \centering
+     \includegraphics[width=0.8\textwidth]{images/comparativa}
+     \caption{Comparación perceptual: NIC vs. JPEG a misma tasa de bits.}
+ \end{figure}
 \end{frame}
