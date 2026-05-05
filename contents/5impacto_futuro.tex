@@ -1,39 +1,71 @@
-\section{Impacto, Futuro y Conclusiones}
+\section{Estándar JPEG AI, Futuro y Conclusiones}
 
 % --- Ponente 5 ---
 
-\begin{frame}{Ecosistema y Estándar JPEG AI}
+\begin{frame}{Estándar JPEG AI}
 \begin{block}{ISO/IEC 6048-1 --- JPEG AI}
+\vspace*{2pt}
 Primer estándar de compresión de imagen basado en redes neuronales, \textbf{libre de regalías}.
 \end{block}
-\begin{itemize}
-    \item Adopción en silicio:
+\begin{columns}[T,onlytextwidth]
+    \column{0.62\textwidth}
     \begin{itemize}
-        \item Apple Neural Engine.
-        \item Qualcomm Hexagon NPU.
-        \item MediaTek APU.
+        \item Adopción en silicio:
+        \begin{itemize}
+            \item Apple Neural Engine.
+            \item Qualcomm Hexagon NPU.
+            \item MediaTek APU.
+        \end{itemize}
+        \item Integración con \textbf{C2PA / JPEG Trust}:
+        \begin{itemize}
+            \item Autenticidad y procedencia de contenido.
+            \item Defensa contra Deepfakes.
+            \item Cadena de custodia criptográfica.
+        \end{itemize}
     \end{itemize}
-    \item Integración con \textbf{C2PA / JPEG Trust}:
-    \begin{itemize}
-        \item Autenticidad y procedencia de contenido.
-        \item Defensa contra Deepfakes.
-        \item Cadena de custodia criptográfica.
-    \end{itemize}
-\end{itemize}
+
+    \column{0.38\textwidth}
+    \centering
+    \includegraphics[width=0.25\textwidth]{images/apple}
+
+    \vspace{0.35cm}
+    \begin{columns}[T,onlytextwidth]
+        \column{0.48\textwidth}
+        \hspace*{-0.02\textwidth}
+        \includegraphics[width=0.6\textwidth]{images/qualcomm}
+
+        \column{0.52\textwidth}
+        \hfill
+        \includegraphics[width=0.7\textwidth]{images/mediatek}
+    \end{columns}
+\end{columns}
+\end{frame}
+
+\begin{frame}{Tendencias Futuras}
+\footnotesize
+% Centered tabular with manual caption (avoid floating table in beamer)
+\makebox[\textwidth][c]{%
+\begin{minipage}{0.95\textwidth}
+    \centering
+    \begin{tabular}{p{0.30\textwidth}|p{0.30\textwidth}|p{0.30\textwidth}}
+        \textbf{Modelos de Difusión Generativa} & \textbf{Arquitecturas Omnimodales} & \textbf{Co-diseño Hardware-Software} \\
+        \noalign{\hrule height 1.2pt}
+        Tensor latente guía proceso de Denoissing & Códecs Imagen-Video (DCVC-UF) & Viabilidad en dispositivos de usuario \\
+        \hline
+        CoD & Transformers de Difusión y LLMs (OneDiffusion, UniVideo) & Minimizar modelo (GETA, cuantización 4/8 bits) \\
+        \hline
+        OSCAR & & Velocidad de respuesta (KV-Cache) \\
+    \end{tabular}
+    \par\vspace{0.3em}
+    {\small \textbf{Tabla 1:} Tendencias futuras}
+\end{minipage}%
+}
 \end{frame}
 
 \begin{frame}{Conclusión: Despliegue ``Core-to-Edge''}
-\begin{exampleblock}{Transición en 4 fases}
-\begin{enumerate}
-    \item \textbf{Servidores Cloud:} Codificación masiva offline (ya activo).
-    \item \textbf{Apps Profesionales:} Edición, archivo, postproducción.
-    \item \textbf{Smartphones con NPU:} Captura y compresión en dispositivo.
-    \item \textbf{Reemplazo universal:} NIC como formato por defecto.
-\end{enumerate}
-\end{exampleblock}
-\vspace{0.3cm}
-\begin{itemize}
-    \item La pregunta no es \textit{si} NIC reemplazará a JPEG, sino \textit{cuándo}.
-    \item El estándar JPEG AI marca el inicio de la transición industrial.
-\end{itemize}
+    \begin{figure}
+        \centering
+        \includegraphics[width=1\textwidth]{images/Core-to-edge}
+        \caption{Despliegue Core-to-Edge de compresión neuronal.}
+    \end{figure}
 \end{frame}
