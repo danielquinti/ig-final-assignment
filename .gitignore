@@ -1,0 +1,47 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.nav
+*.out
+*.toc
+*.snm
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.synctex.gz(?:pgf)?
+*.xdv
+*.lof
+*.lot
+*.lol
+*.bbl
+*.bcf
+*.blg
+*.run.xml
+
+# Generated PDFs
+*.pdf
+
+# Temporary files
+*~
+*.tmp
+*.bak
+*.backup
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# VS Code workspace settings
+.vscode/
+
+# TinyTeX / TeX Live local trees
+texmf-var/
+texmf-config/
+
+# Logs and session files
+*.log
+*.out
+*.zip
+*.tar.gz
