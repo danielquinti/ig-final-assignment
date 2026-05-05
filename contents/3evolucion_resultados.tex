@@ -10,34 +10,34 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Evolución Arquitectónica}
+\begin{frame}{Evolución Arquitectónica: Diagrama}
  \begin{figure}
      \centering
-     \includegraphics[width=0.9\textwidth]{images/evolution_diagram}
+     \includegraphics[height=0.55\textheight]{images/evolution_diagram}
      \caption{De CNNs a Vision Transformers en compresión neuronal.}
 \end{figure}
 \end{frame}
 
-\begin{frame}{Resultados vs. JPEG}
+\begin{frame}{Resultados cuantitativos vs. JPEG}
 \begin{alertblock}{BD-Rate: 65\% de ahorro}
 Los modelos NIC actuales ahorran un \textbf{65\% de bits} respecto a JPEG manteniendo la misma calidad visual en el dataset Kodak.
 \end{alertblock}
 \begin{itemize}
-    \item Métrica \textbf{BD-Rate}: mide el ahorro porcentual de bits a calidad equivalente.
-    \item Superan también a HEVC/Intra en múltiples benchmarks.
+    \item \textbf{BD-Rate}: ahorro porcentual de bits para la misma calidad.
+    \item Superan a JPEG y también a HEVC/Intra en benchmarks relevantes.
     \item Rendimiento consistente en distintos tipos de contenido.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Resultados vs. JPEG}
+\begin{frame}{Resultados: Curva Tasa-Distorsión}
  \begin{figure}
      \centering
-     \includegraphics[width=0.8\textwidth]{images/kodak-psnr}
+     \includegraphics[height=0.8\textheight]{images/kodak-psnr}
      \caption{Curva Tasa-Distorsión: NIC vs. códecs clásicos.}
  \end{figure}
 \end{frame}
 
-\begin{frame}{Ventajas Perceptivas y Adaptabilidad}
+\begin{frame}{Ventajas perceptivas y adaptabilidad}
 \begin{itemize}
     \item \textbf{Fine-tuning} para dominios específicos:
     \begin{itemize}
@@ -45,15 +45,15 @@ Los modelos NIC actuales ahorran un \textbf{65\% de bits} respecto a JPEG manten
         \item Imágenes satelitales.
         \item Contenido artístico.
     \end{itemize}
-    \item Uso de métricas perceptuales como \textbf{MS-SSIM} para optimizar para el ojo humano.
+    \item Métricas perceptuales como \textbf{MS-SSIM} optimizan para el ojo humano.
     \item Degradación \textbf{suave y gradual}, sin artefactos de bloque.
 \end{itemize}
 \end{frame}
 
-\begin{frame}{Ventajas Perceptivas y Adaptabilidad}
+\begin{frame}{Comparativa perceptual}
  \begin{figure}
      \centering
-     \includegraphics[width=0.8\textwidth]{images/comparativa}
+     \includegraphics[height=0.5\textheight]{images/comparativa}
      \caption{Comparación perceptual: NIC vs. JPEG a misma tasa de bits.}
  \end{figure}
 \end{frame}
