@@ -2,58 +2,59 @@
 
 % --- Ponente 3 ---
 
+% SLIDE 1: Solo el diagrama, sin texto previo redundante
 \begin{frame}{Evolución Arquitectónica}
-\begin{itemize}
-    \item \textbf{Primera generación:} CNNs --- capturan patrones \textit{locales} eficientemente.
-    \item \textbf{Segunda generación:} \textbf{Vision Transformers (ViT)} --- entienden el \textit{contexto global} mediante mecanismos de \textbf{atención}.
-    \item La atención permite ponderar regiones distantes de la imagen para una codificación más eficiente.
-\end{itemize}
+    \vspace{-1em}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.55\textheight]{images/evolution_diagram}
+        \caption{De CNNs a Vision Transformers (2017–actualidad).}
+    \end{figure}
 \end{frame}
 
-\begin{frame}{Evolución Arquitectónica: Diagrama}
- \begin{figure}
-     \centering
-     \includegraphics[height=0.55\textheight]{images/evolution_diagram}
-     \caption{De CNNs a Vision Transformers en compresión neuronal.}
-\end{figure}
+\begin{frame}{Resultados: Dataset Kodak}
+    \begin{columns}[c]
+        \begin{column}{0.28\textwidth}
+            \centering
+
+            % Dato principal grande
+            {\fontsize{25}{30}\selectfont\textbf{\textcolor{structure}{−65\%}}}
+
+            \vspace{0.2em}
+            {\small\textbf{BD-Rate vs.\ JPEG}}
+
+            \vspace{0.8em}
+            \rule{\linewidth}{0.5pt}
+            \vspace{0.5em}
+
+            % Dos bullets cortos
+            \raggedright
+            {\small
+            \textbf{Gen.\ 4} iguala \textbf{VVC} (H.266)
+
+            \vspace{0.4em}
+            Supera \textbf{BPG/HEVC} en toda la curva
+            }
+        \end{column}
+        \begin{column}{0.68\textwidth}
+            \begin{figure}
+                \centering
+                \includegraphics[width=\linewidth]{images/kodak-psnr}
+                \caption{\small PSNR (RGB) sobre Kodak. 
+                         Fuente: CompressAI.}
+            \end{figure}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\begin{frame}{Resultados cuantitativos vs. JPEG}
-\begin{alertblock}{BD-Rate: 65\% de ahorro}
-Los modelos NIC actuales ahorran un \textbf{65\% de bits} respecto a JPEG manteniendo la misma calidad visual en el dataset Kodak.
-\end{alertblock}
-\begin{itemize}
-    \item \textbf{BD-Rate}: ahorro porcentual de bits para la misma calidad.
-    \item Superan a JPEG y también a HEVC/Intra en benchmarks relevantes.
-    \item Rendimiento consistente en distintos tipos de contenido.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Resultados: Curva Tasa-Distorsión}
- \begin{figure}
-     \centering
-     \includegraphics[height=0.8\textheight]{images/kodak-psnr}
-     \caption{Curva Tasa-Distorsión: NIC vs. códecs clásicos.}
- \end{figure}
-\end{frame}
-
-\begin{frame}{Ventajas perceptivas y adaptabilidad}
-\begin{itemize}
-    \item \textbf{Fine-tuning} para dominios específicos:
-    \begin{itemize}
-        \item Radiografías médicas.
-        \item Imágenes satelitales.
-        \item Contenido artístico.
-    \end{itemize}
-    \item Métricas perceptuales como \textbf{MS-SSIM} optimizan para el ojo humano.
-    \item Degradación \textbf{suave y gradual}, sin artefactos de bloque.
-\end{itemize}
-\end{frame}
-
-\begin{frame}{Comparativa perceptual}
- \begin{figure}
-     \centering
-     \includegraphics[height=0.5\textheight]{images/comparativa}
-     \caption{Comparación perceptual: NIC vs. JPEG a misma tasa de bits.}
- \end{figure}
+% SLIDE 3: Imagen central + una línea de contexto
+\begin{frame}{Calidad Perceptual a Tasas Bajas}
+    \begin{figure}
+        \centering
+        \includegraphics[height=0.5\textheight]{images/comparativa}
+    \end{figure}
+    \begin{center}
+        \small NIC preserva texturas naturales donde JPEG genera 
+        \textbf{artefactos de bloque} visibles ($\approx$0.21 bpp).
+    \end{center}
 \end{frame}
